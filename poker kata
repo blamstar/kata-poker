@@ -1,0 +1,35 @@
+# Poker Kata
+
+## 1. Initial Parsing of Hand
+
+### 1.1 High Level Goal
+Convert the string "2D 5S 4C 6D 7H" into an array of Card objects with fields for face value and suit.
+
+### 1.2 Steps
+- Define a Card object with two values in the constructor: the card value (integer) and the card suit (string)
+
+- Test creating a Card object and fetching the values
+    e.g. 
+    new Card(2, "D")->cardValue == 2
+    new Card(2, "D")->cardSuit == "D"
+
+- Make and test a function to split a string into words by space
+    e.g.   
+    splitWords("4K 2D 5S") == ["4K", "2D", "5S"]
+
+- Write tests for splitWords
+
+- Make a function to convert a single string of two characters into a Card object
+    - it will need to convert the first character from string to integer
+
+    e.g. 
+    parseCard("2D") == new Card(2, "D")
+
+- Write tests for parseCard
+
+- Make a function parseCards that can loop over an array of strings and call parseCard with them
+
+    e.g.
+    parseCards(["2D", "4H"])[0]->cardValue == 2
+
+- Write tests for parseCards
